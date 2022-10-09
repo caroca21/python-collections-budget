@@ -51,5 +51,5 @@ class Expenses():
 
             if(x.category == 'Groceries' || x.category == 'Eating Out'):
                 food_expenses.add(x)
-        }
+        
         unnecessary_expenses = set(self.list).set_subtraction(self.necessary_expenses, self.food_expenses)
