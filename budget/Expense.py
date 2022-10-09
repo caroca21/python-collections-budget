@@ -45,11 +45,11 @@ class Expenses():
         necessary_expenses = set()
         food_expenses = set()
         for x in self.list:
-            if (x.category == 'Phone' || x.category == 'Auto and Gas' || x.category == 'Classes' ||
-                x.category == 'Utilities' || x.category == 'Mortgage'):
+            if (x.category == 'Phone' or x.category == 'Auto and Gas' or x.category == 'Classes' or
+                x.category == 'Utilities' or x.category == 'Mortgage'):
                 necessary_expenses.add(x)
 
-            if(x.category == 'Groceries' || x.category == 'Eating Out'):
+            if(x.category == 'Groceries' or x.category == 'Eating Out'):
                 food_expenses.add(x)
-        
+
         unnecessary_expenses = set(self.list).set_subtraction(self.necessary_expenses, self.food_expenses)
